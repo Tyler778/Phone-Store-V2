@@ -7,10 +7,16 @@ import * as serviceWorker from './serviceWorker';
 //Router needs to encompass everything, so placed in index
 import {BrowserRouter as Router} from 'react-router-dom'
 
+//Context
+import {ProductProvider} from './Components/Context API/context'
+
 ReactDOM.render(
-<Router>
-  <App />
-</Router>
+  <ProductProvider>
+    <Router>
+      <App />
+    </Router>
+  </ProductProvider>
+
 , document.getElementById('root'));
 
 serviceWorker.unregister();
